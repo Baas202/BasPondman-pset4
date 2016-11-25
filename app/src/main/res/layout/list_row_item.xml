@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="6dp"
         android:padding="3dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         android:textColor="@color/colorWhite"/>
 
     <TextView
@@ -26,5 +26,6 @@
         android:textSize="17sp"
         android:textStyle="normal"
         android:textColor="@color/colorWhite"/>
+
 
 </RelativeLayout>

@@ -8,4 +8,8 @@
     <string name="enter_desc">Currency</string>
     <string name="enter_title">Country</string>
     <string name="delete_all">DELETE ALL</string>
+    <string name="button_delete_all_txt">Yes, delete all</string>
+    <string name="cancel">Cancel</string>
+    <string name="my_to_do_list">My To-Do list:</string>
+    <string name="empty_list">Empty list...</string>
 </resources>

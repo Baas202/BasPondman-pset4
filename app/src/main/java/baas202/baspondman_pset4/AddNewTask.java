@@ -11,22 +11,21 @@ import android.widget.EditText;
 
 public class AddNewTask extends Activity implements OnClickListener {
 
-    private Button add_button_todo;
     private EditText input_text;
-
     private DBManager dbManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // set the content for the popup box
         setTitle("Add a new task");
 
         setContentView(R.layout.add_task_activity);
 
         input_text = (EditText) findViewById(R.id.input_add_task);
 
-        add_button_todo = (Button) findViewById(R.id.add_button);
+        Button add_button_todo = (Button) findViewById(R.id.add_button);
 
         dbManager = new DBManager(this);
         dbManager.open();
@@ -36,6 +35,7 @@ public class AddNewTask extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            // inserts new task when Add button is clicked
             case R.id.add_button:
 
                 final String name = input_text.getText().toString();

@@ -54,6 +54,9 @@ public class DBManager {
         database.delete(DatabaseHelper.TABLE_NAME, DatabaseHelper.COLUMN_ID + "=" + _id, null);
     }
 
+    /* Got it from poovi.org (StackOverflow)
+    http://stackoverflow.com/questions/3094444/delete-all-rows-from-a-table-throws-nullpointer
+     */
     public void deleteAll()
     {
         database.delete(DatabaseHelper.TABLE_NAME, null, null);

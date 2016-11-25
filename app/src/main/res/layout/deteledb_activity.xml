@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="2"
@@ -8,15 +9,17 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yes, delete all"
+        android:text="@string/button_delete_all_txt"
         android:layout_weight="1"
-        android:id="@+id/delete_all_button" />
+        android:id="@+id/delete_all_button"
+        tools:ignore="ButtonStyle" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancel"
+        android:text="@string/cancel"
         android:layout_weight="1"
-        android:id="@+id/cancel_button"/>
+        android:id="@+id/cancel_button"
+        tools:ignore="ButtonStyle" />
 
 </LinearLayout>

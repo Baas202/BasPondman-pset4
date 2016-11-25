@@ -2,9 +2,7 @@ package baas202.baspondman_pset4;
 
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,9 +31,6 @@ public class DeleteAllTask extends Activity implements View.OnClickListener {
         cancel_button.setOnClickListener(this);
 
     }
-
-
-
 
     @Override
     public void onClick(View v) {

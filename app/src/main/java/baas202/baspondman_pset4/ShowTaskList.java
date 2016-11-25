@@ -15,11 +15,7 @@ import android.widget.TextView;
 
 public class ShowTaskList extends ActionBarActivity {
 
-    private DBManager dbManager;
-
     private ListView listView;
-
-    private SimpleCursorAdapter adapter;
 
     final String[] from = new String[] {DatabaseHelper.COLUMN_ID,
             DatabaseHelper.COLUMN_TODO};
@@ -32,19 +28,19 @@ public class ShowTaskList extends ActionBarActivity {
 
         setContentView(R.layout.mainscreen_activity);
 
-        dbManager = new DBManager(this);
+        DBManager dbManager = new DBManager(this);
         dbManager.open();
         Cursor cursor = dbManager.read();
 
         listView = (ListView) findViewById(R.id.list_view);
         listView.setEmptyView(findViewById(R.id.empty));
 
-        adapter = new SimpleCursorAdapter(this, R.layout.list_row_item, cursor, from, to, 0);
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.list_row_item, cursor, from, to, 0);
         adapter.notifyDataSetChanged();
 
         listView.setAdapter(adapter);
 
-        // OnCLickListener For List Items
+        // When clicked on a listview item it will go to the update screen
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long viewId) {
@@ -65,10 +61,11 @@ public class ShowTaskList extends ActionBarActivity {
 
     }
 
+    // when button clicked it will delete the db
     public void deleteDB(View view) {
         {
-            Intent deleteall_intent = new Intent(this, DeleteAllTask.class);
-            startActivity(deleteall_intent);
+            Intent delete_all_intent = new Intent(this, DeleteAllTask.class);
+            startActivity(delete_all_intent);
         }
     }
 
@@ -84,7 +81,7 @@ public class ShowTaskList extends ActionBarActivity {
 
         int id = item.getItemId();
         if (id == R.id.add_record) {
-
+            // goes to the add_task screen when option menu is clicked
             Intent add_mem = new Intent(this, AddNewTask.class);
             startActivity(add_mem);
 
