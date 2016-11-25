@@ -5,4 +5,4 @@ Bas Pondman
 
 ![ScreenShot](doc/Screenshot_1480076641.png)
 ![ScreenShot](doc/Screenshot_1480076671.png)
-![ScreenShot](doc/Screenshot_1480076689.png
+![ScreenShot](doc/Screenshot_1480076689.png)
