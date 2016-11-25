@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
 public class ShowTaskList extends ActionBarActivity {
 
     private DBManager dbManager;
@@ -20,7 +21,7 @@ public class ShowTaskList extends ActionBarActivity {
 
     private SimpleCursorAdapter adapter;
 
-    final String[] from = new String[] { DatabaseHelper.COLUMN_ID,
+    final String[] from = new String[] {DatabaseHelper.COLUMN_ID,
             DatabaseHelper.COLUMN_TODO};
 
     final int[] to = new int[] { R.id.id, R.id.title,};
@@ -47,15 +48,15 @@ public class ShowTaskList extends ActionBarActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long viewId) {
-                TextView idTextView = (TextView) view.findViewById(R.id.id);
                 TextView titleTextView = (TextView) view.findViewById(R.id.title);
+                TextView idTextView = (TextView) view.findViewById(R.id.id);
 
                 String id = idTextView.getText().toString();
                 String task = titleTextView.getText().toString();
 
                 Intent modify_intent = new Intent(getApplicationContext(), UpdateTasks.class);
-                modify_intent.putExtra("task", task);
                 modify_intent.putExtra("id", id);
+                modify_intent.putExtra("task", task);
 
                 startActivity(modify_intent);
             }
@@ -66,11 +67,8 @@ public class ShowTaskList extends ActionBarActivity {
 
     public void deleteDB(View view) {
         {
-            dbManager = new DBManager(this);
-            dbManager.open();
-            dbManager.read();
-            dbManager.deleteAll();
-            adapter.notifyDataSetChanged();
+            Intent deleteall_intent = new Intent(this, DeleteAllTask.class);
+            startActivity(deleteall_intent);
         }
     }
 
