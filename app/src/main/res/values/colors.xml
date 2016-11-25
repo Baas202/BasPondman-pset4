@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorGraphiteBlack">#312F32</color>
+    <color name="colorWhite">#F6F7F9</color>
+    <color name="colorBrightRed">#F64230</color>
+    <color name="colorPaletGreen">#20A098</color>
+    <color name="colorBckGrndButtons">#575759</color>
+
+
+</resources>
